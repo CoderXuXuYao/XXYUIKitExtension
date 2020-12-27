@@ -7,7 +7,6 @@
 //
 
 #import "XYViewController.h"
-#import <XXYUIKitExtensionHeader.h>
 
 @interface XYViewController ()
 
