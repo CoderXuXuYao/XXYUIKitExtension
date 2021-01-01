@@ -47,7 +47,7 @@
                       seletor:(SEL)seletor{
     XYUIButton *button = [[XYUIButton alloc] init];
     [button setTitle:title forState:UIControlStateNormal];
-    [button setTitleColor:title forState:UIControlStateNormal];
+    [button setTitleColor:titleColor forState:UIControlStateNormal];
     [button addTarget:target action:seletor forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
