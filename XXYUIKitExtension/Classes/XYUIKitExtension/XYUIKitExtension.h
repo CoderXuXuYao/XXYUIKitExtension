@@ -48,7 +48,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param target <#target description#>
 + (XYUIButton *)initWithTitle:(NSString *)title
                    titleColor:(UIColor *)titleColor
-                       target:(SEL)target;
+                       target:(id)target
+                      seletor:(SEL)seletor;
 
 /// 创建带标题的button 可设置标题正常、高亮颜色，带有点击事件
 /// @param title <#title description#>
@@ -58,7 +59,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (XYUIButton *)initWithTitle:(NSString *)title
              titleNormalColor:(UIColor *)titleNormalColor
               titleHeighColor:(UIColor *)titleHeighColor
-                       target:(SEL)target;
+                       target:(id)target
+                      seletor:(SEL)seletor;
 
 /// 创建带标题、点击事件的button，可设置背景图，正常图。选中图
 /// @param title <#title description#>
@@ -70,7 +72,8 @@ NS_ASSUME_NONNULL_BEGIN
                    titleColor:(UIColor *)titleColor
                     normalImg:(UIImage *)normalImg
                   selectedImg:(UIImage *)selectedImg
-                       target:(SEL)target;
+                       target:(id)target
+                      seletor:(SEL)seletor;
 
 /// 创建仅带有背景图的button
 /// @param normalImg <#normalImg description#>
@@ -78,7 +81,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param target <#target description#>
 + (XYUIButton *)initWithNormalImg:(UIImage *)normalImg
                       selectedImg:(UIImage *)selectedImg
-                           target:(SEL)target;
+                           target:(id)target
+                          seletor:(SEL)seletor;
 
 
 

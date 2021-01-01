@@ -43,11 +43,12 @@
 // 创建带标题的button 可设置标题颜色，带有点击事件
 + (XYUIButton *)initWithTitle:(NSString *)title
                    titleColor:(UIColor *)titleColor
-                       target:(SEL)target{
+                       target:(id)target
+                      seletor:(SEL)seletor{
     XYUIButton *button = [[XYUIButton alloc] init];
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:title forState:UIControlStateNormal];
-    [button addTarget:self action:target forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:target action:seletor forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
 
@@ -55,12 +56,13 @@
 + (XYUIButton *)initWithTitle:(NSString *)title
              titleNormalColor:(UIColor *)titleNormalColor
               titleHeighColor:(UIColor *)titleHeighColor
-                       target:(SEL)target{
+                       target:(id)target
+                      seletor:(SEL)seletor{
     XYUIButton *button = [[XYUIButton alloc] init];
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:titleNormalColor forState:UIControlStateNormal];
     [button setTitleColor:titleHeighColor forState:UIControlStateHighlighted];
-    [button addTarget:self action:target forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:target action:seletor forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
 
@@ -69,23 +71,26 @@
                    titleColor:(UIColor *)titleColor
                     normalImg:(UIImage *)normalImg
                   selectedImg:(UIImage *)selectedImg
-                       target:(SEL)target{
+                       target:(id)target
+                      seletor:(SEL)seletor{
     XYUIButton *button = [[XYUIButton alloc] init];
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:titleColor forState:UIControlStateNormal];
     [button setImage:normalImg forState:UIControlStateNormal];
     [button setImage:selectedImg forState:UIControlStateSelected];
-    [button addTarget:self action:target forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:target action:seletor forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
 
 // 创建仅带有背景图的button
 + (XYUIButton *)initWithNormalImg:(UIImage *)normalImg
                       selectedImg:(UIImage *)selectedImg
-                           target:(SEL)target{
+                           target:(id)target
+                          seletor:(SEL)seletor{
     XYUIButton *button = [[XYUIButton alloc] init];
     [button setImage:normalImg forState:UIControlStateNormal];
     [button setImage:selectedImg forState:UIControlStateSelected];
+    [button addTarget:target action:seletor forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
 
