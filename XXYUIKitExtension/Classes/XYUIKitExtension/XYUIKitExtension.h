@@ -7,9 +7,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class XYUILabel;
-@class XYUIButton;
-@class XYUIView;
+#import "XYUILabel.h"
+#import "XYUIButton.h"
+#import "XYUIView.h"
+#import "NSString+Extension.h"
+
+#import "UILabel+Extension.h"
+#import "UIButton+Extension.h"
+#import "UIView+Extension.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

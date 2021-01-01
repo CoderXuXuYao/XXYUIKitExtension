@@ -7,6 +7,8 @@
 //
 
 #import "XYViewController.h"
+#import "XYTestViewController.h"
+#import <XXYUIKitExtension/XYUIKitExtension.h>
 
 @interface XYViewController ()
 
@@ -18,6 +20,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self test];
+}
+
+- (void)test{
+    self.view.backgroundColor = [UIColor redColor];
+    XYUIButton *button = [XYUIKitExtension initWithTitle:@"click" titleColor:[UIColor whiteColor] target:@selector(handleWithSender:)];
+    button.frame = CGRectMake(0, 0, 50, 30);
+    button.center = self.view.center;
+    [self.view addSubview:button];
+}
+
+- (void)handleWithSender:(XYUIButton *)sender{
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:[[XYTestViewController alloc] init]];
+    [self.navigationController pushViewController:nvc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
