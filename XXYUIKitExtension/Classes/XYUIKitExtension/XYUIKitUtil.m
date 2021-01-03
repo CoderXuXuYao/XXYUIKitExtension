@@ -23,28 +23,19 @@
     return NO;
 }
 
-+ (int)whichDayWithYear:(int)y month:(int)m day:(int)d{
++ (int)dayWithYear:(int)year month:(int)month day:(int)day{
     int i,sum;
     int days[]={0,31,28,31,30,31,30,31,31,30,31,30,31};
     for(i=1;i<13;i++){
         days[i]+=days[i-1];
     }
-    sum=days[m-1]+d;
-    if([self isRunYearWithYear:y]){
+    sum=days[month-1]+day;
+    if([self isRunYearWithYear:year]){
         sum+=1;
     }
     return sum;
 }
 
-//window
-+ (UIWindow *)currentWindow {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    return appDelegate.window;
-}
-//appdelegate
-+ (AppDelegate *)currentAppDelegate{
-    return (AppDelegate *)[UIApplication sharedApplication].delegate;
-}
 //获取当前控制器
 + (UIViewController *)currentViewController {
     UIViewController *resultVC;
@@ -54,15 +45,12 @@
     }
     return resultVC;
 }
-
-+ (UIViewController *)topViewController:(UIViewController *)vc
-{
-    if ([vc isKindOfClass:[UINavigationController class]])
-    {
-        return [XXYTools topViewController:[(UINavigationController *)vc topViewController]];
-    } else if ([vc isKindOfClass:[UITabBarController class]])
-    {
-        return [XXYTools topViewController:[(UITabBarController *)vc selectedViewController]];
+#pragma mark - pravite action
++ (UIViewController *)topViewController:(UIViewController *)vc{
+    if ([vc isKindOfClass:[UINavigationController class]]){
+        return [XYUIKitUtil topViewController:[(UINavigationController *)vc topViewController]];
+    } else if ([vc isKindOfClass:[UITabBarController class]]){
+        return [XYUIKitUtil topViewController:[(UITabBarController *)vc selectedViewController]];
     } else {
         return vc;
     }

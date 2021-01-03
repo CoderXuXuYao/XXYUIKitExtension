@@ -25,7 +25,8 @@
 
 - (void)test{
     self.view.backgroundColor = [UIColor redColor];
-    XYUIButton *button = [XYUIKitExtension initWithTitle:@"click" titleColor:[UIColor whiteColor] target:self seletor:@selector(handleWithSender:)];
+//    XYUIButton *button = [XYUIKitExtension initWithTitle:@"click" titleColor:[UIColor whiteColor] target:self seletor:@selector(handleWithSender:)];
+    XYUIButton *button = [[XYUIKitExtension shareInstance] createWithTitle:@"click" titleColor:[UIColor whiteColor] target:self seletor:@selector(handleWithSender:)];
     button.frame = CGRectMake(0, 0, 50, 30);
     button.center = self.view.center;
     [self.view addSubview:button];

@@ -11,14 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XYUIKitUtil : NSObject
 
-/** 判断是否为闰年 **/
+/// 判断是否为闰年
+/// @param year <#year description#>
 + (BOOL)isRunYearWithYear:(int)year;
-/** 计算几天是一年中的第几天 **/
-+ (int)whichDayWithYear:(int)y month:(int)m day:(int)d;
-/** window **/
-+ (UIWindow *)currentWindow;
-/** appdelegate **/
-+ (AppDelegate *)currentAppDelegate;
+/** 计算当天是一年中的第几天 **/
++ (int)dayWithYear:(int)year month:(int)month day:(int)day;
 /** 获取当前vc */
 + (UIViewController *)currentViewController;
 
