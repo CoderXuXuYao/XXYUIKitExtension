@@ -1,15 +1,15 @@
 //
-//  UIView+Extension.h
+//  NSString+XYExtension.h
 //  XXYUIKitExtension
 //
 //  Created by 许须耀 on 2020/12/27.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (Extension)
+@interface NSString (XYExtension)
 
 @end
 

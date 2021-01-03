@@ -33,7 +33,7 @@
 
 - (void)handleWithSender:(XYUIButton *)sender{
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:[[XYTestViewController alloc] init]];
-    [self.navigationController pushViewController:nvc animated:YES];
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

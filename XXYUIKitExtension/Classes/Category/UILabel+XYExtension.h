@@ -1,5 +1,5 @@
 //
-//  UILabel+Extension.h
+//  UILabel+XYExtension.h
 //  XXYUIKitExtension
 //
 //  Created by 许须耀 on 2020/12/27.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UILabel (Extension)
+@interface UILabel (XYExtension)
 
 @end
 

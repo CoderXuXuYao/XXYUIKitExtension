@@ -1,5 +1,5 @@
 //
-//  UIButton+Extension.h
+//  UIButton+XYExtension.h
 //  XXYUIKitExtension
 //
 //  Created by 许须耀 on 2020/12/27.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIButton (Extension)
+@interface UIButton (XYExtension)
 
 @end
 
