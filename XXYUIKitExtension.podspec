@@ -31,7 +31,6 @@ TODO: Easy to create UI XXYUIKitExtension with OC.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'XXYUIKitExtension/Classes/**/*'
-  s.resource     = 'XXYUIKitExtension/XXYUIKitExtension/Resources/XYUIKitExtension.bundle'
   # s.resource_bundles = {
   #   'XXYUIKitExtension' => ['XXYUIKitExtension/Assets/*.png']
   # }
