@@ -31,9 +31,10 @@ TODO: Easy to create UI XXYUIKitExtension with OC.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'XXYUIKitExtension/Classes/**/*'
-  # s.resource_bundles = {
-  #   'XXYUIKitExtension' => ['XXYUIKitExtension/Assets/*.png']
-  # }
+
+  s.resource_bundles = {
+    'XXYUIKitExtension' => ['XXYUIKitExtension/Assets/*.png']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
