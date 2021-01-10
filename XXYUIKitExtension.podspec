@@ -42,5 +42,6 @@ TODO: Easy to create UI XXYUIKitExtension with OC.
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'MBProgressHUD'
   s.dependency 'SVProgressHUD'
+  s.dependency 'YYKit'
   
 end
