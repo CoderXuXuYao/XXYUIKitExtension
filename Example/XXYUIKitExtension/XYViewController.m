@@ -9,6 +9,7 @@
 #import "XYViewController.h"
 #import "XYTestViewController.h"
 #import <XXYUIKitExtension/XYUIKitExtension.h>
+#import <Masonry/Masonry.h>
 
 @interface XYViewController ()
 
@@ -27,9 +28,13 @@
     self.view.backgroundColor = [UIColor redColor];
 //    XYUIButton *button = [XYUIKitExtension initWithTitle:@"click" titleColor:[UIColor whiteColor] target:self seletor:@selector(handleWithSender:)];
     XYUIButton *button = [[XYUIKitExtension shareInstance] createWithTitle:@"click" titleColor:[UIColor whiteColor] target:self seletor:@selector(handleWithSender:)];
-    button.frame = CGRectMake(0, 0, 50, 30);
-    button.center = self.view.center;
+    button.backgroundColor = [UIColor blueColor];
     [self.view addSubview:button];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(button.mas_width).multipliedBy(.5); // 高是宽的1/2
+        make.centerX.centerY.equalTo(self.view);
+    }];
 }
 
 - (void)handleWithSender:(XYUIButton *)sender{

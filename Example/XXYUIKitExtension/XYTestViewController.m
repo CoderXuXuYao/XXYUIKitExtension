@@ -7,6 +7,8 @@
 //
 
 #import "XYTestViewController.h"
+#import <XXYUIKitExtension/XYUIKitExtensionHeader.h>
+#import <Masonry/Masonry.h>
 
 @interface XYTestViewController ()
 
@@ -22,6 +24,14 @@
 
 - (void)test {
     self.view.backgroundColor = [UIColor whiteColor];
+    XYUILabel *lab = [[XYUIKitExtension shareInstance] createWithString:@"Test nisisi" textColor:[UIColor xyRedColor_eb414a] fontValue:15.0];
+    [self.view addSubview:lab];
+    [lab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.centerX.centerY.mas_equalTo(self.view);
+    }];
+    //
+    [lab changeWordSpaceWithSpace:20];
 }
 
 /*

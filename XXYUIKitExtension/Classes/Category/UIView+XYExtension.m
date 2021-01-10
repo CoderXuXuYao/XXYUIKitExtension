@@ -102,7 +102,7 @@ const char XYActionHanlderTapBlockKey;              // 添加点击事件block k
     // 运行时获取单击对象
     UITapGestureRecognizer *tap = objc_getAssociatedObject(self, &XYActionHanlderTapGestureKey);
     if (!tap) {
-        // 如果没有改对象，就创建一个
+        // 如果没有该对象，就创建一个
         tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleActionWithTapGesture:)];
         [self addGestureRecognizer:tap];
         // 绑定一下tapgesture

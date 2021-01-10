@@ -5,11 +5,10 @@ platform :ios, '9.0'
 target 'XXYUIKitExtension_Example' do
   pod 'XXYUIKitExtension', :path => '../'
   #pod 'XXYUIKitExtension', :podspec => '../XXYUIKitExtension.podspec'
-
+  pod 'Masonry'
   target 'XXYUIKitExtension_Tests' do
     inherit! :search_paths
 
     pod 'FBSnapshotTestCase'
-    pod 'Masonry'
   end
 end

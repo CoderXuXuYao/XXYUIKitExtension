@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XXYUIKitExtension'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'Easy to create UI XXYUIKitExtension with OC.'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ TODO: Easy to create UI XXYUIKitExtension with OC.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'XXYUIKitExtension/Classes/**/*'
-  
+  s.resource     = 'XXYUIKitExtension/XXYUIKitExtension/Resources/XYUIKitExtension.bundle'
   # s.resource_bundles = {
   #   'XXYUIKitExtension' => ['XXYUIKitExtension/Assets/*.png']
   # }
@@ -40,4 +40,7 @@ TODO: Easy to create UI XXYUIKitExtension with OC.
   s.frameworks = 'UIKit'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'MBProgressHUD'
+  s.dependency 'SVProgressHUD'
+  
 end
