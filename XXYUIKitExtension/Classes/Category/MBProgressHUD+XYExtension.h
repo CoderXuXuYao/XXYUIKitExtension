@@ -34,6 +34,50 @@ NS_ASSUME_NONNULL_BEGIN
  @param delay <#delay description#>
  */
 + (void)showTipInViewWithMessage:(NSString *)message delay:(double)delay;
+/**
+ 加载过程 progress
+ @param message message
+ */
++ (void)showActivityMessageInWindow:(NSString*)message;
++ (void)showActivityMessageInView:(NSString*)message;
+/**
+ 加载过程 progress
+ @param message message
+ @param delay delay
+ */
++ (void)showActivityMessageInWindow:(NSString*)message delay:(double)delay;
++ (void)showActivityMessageInView:(NSString*)message delay:(double)delay;
+
+#pragma mark-------------------- show Image----------------------------
+
+/**
+ success
+
+ @param message <#message description#>
+ */
++ (void)showSuccessMessage:(NSString *)message;
+
+/**
+ error
+
+ @param message <#message description#>
+ */
++ (void)showErrorMessage:(NSString *)message;
+
+/**
+ infoMessage
+
+ @param message <#message description#>
+ */
++ (void)showInfoMessage:(NSString *)message;
+
+/**
+ warning
+
+ @param message <#message description#>
+ */
++ (void)showWarnMessage:(NSString *)message;
+
 
 @end
 

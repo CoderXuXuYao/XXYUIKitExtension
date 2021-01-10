@@ -1,14 +1,14 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '8.0'
 
 target 'XXYUIKitExtension_Example' do
   pod 'XXYUIKitExtension', :path => '../'
   #pod 'XXYUIKitExtension', :podspec => '../XXYUIKitExtension.podspec'
   pod 'Masonry'
+  
   target 'XXYUIKitExtension_Tests' do
     inherit! :search_paths
-
     pod 'FBSnapshotTestCase'
   end
 end

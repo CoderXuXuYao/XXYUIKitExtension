@@ -38,14 +38,12 @@ const double hideTime = 2.f;
     [MBProgressHUD showActivityMessage:message isWindow:NO timer:0];
 }
 
-+ (void)showActivityMessageInWindow:(NSString*)message
-                              timer:(double)aTimer{
-    [MBProgressHUD showActivityMessage:message isWindow:YES timer:aTimer];
++ (void)showActivityMessageInWindow:(NSString*)message timer:(double)delay{
+    [MBProgressHUD showActivityMessage:message isWindow:YES timer:delay];
 }
 
-+ (void)showActivityMessageInView:(NSString*)message
-                            timer:(double)aTimer{
-    [MBProgressHUD showActivityMessage:message isWindow:NO timer:aTimer];
++ (void)showActivityMessageInView:(NSString*)message timer:(double)delay{
+    [MBProgressHUD showActivityMessage:message isWindow:NO timer:delay];
 }
 
 
@@ -101,10 +99,8 @@ const double hideTime = 2.f;
     [hud hideAnimated:YES afterDelay:aTimer];
 }
 
-+ (void)showActivityMessage:(NSString*)message
-                   isWindow:(BOOL)isWindow
-                      timer:(int)aTimer{
-    MBProgressHUD *hud  =  [MBProgressHUD initWithMessage:message inWindow:isWindow mode:MBProgressHUDModeIndeterminate hudAnimation:MBProgressHUDAnimationFade];
++ (void)showActivityMessage:(NSString*)message isWindow:(BOOL)isWindow timer:(int)aTimer{
+    MBProgressHUD *hud = [MBProgressHUD initWithMessage:message inWindow:isWindow mode:MBProgressHUDModeIndeterminate hudAnimation:MBProgressHUDAnimationFade];
     if (aTimer > 0) {
         [hud hideAnimated:YES afterDelay:aTimer];
     }
